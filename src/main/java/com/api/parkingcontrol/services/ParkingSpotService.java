@@ -15,8 +15,20 @@ public class ParkingSpotService {
         this.parkingSpotRepository = parkingSpotRepository;
     }
 
-    @Transactional
+    @Transactional  // Métodos de construção ou destruição devem acompanhar essa annotation para rollback em caso de erro
     public ParkingSpot save(ParkingSpot parkingSpotModel) {
         return parkingSpotRepository.save(parkingSpotModel);
+    }
+
+    public boolean existsByLicensePlateCar(String licensePlateCar) {
+        return parkingSpotRepository.existsByLicensePlateCar(licensePlateCar);
+    }
+
+    public boolean existsByParkingSpotNumber(String parkingSpotNumber) {
+        return parkingSpotRepository.existsByParkingSpotNumber(parkingSpotNumber);
+    }
+
+    public boolean existsByApartmentAndBlock(String apartment, String block) {
+        return parkingSpotRepository.existsByApartmentAndBlock(apartment, block);
     }
 }
