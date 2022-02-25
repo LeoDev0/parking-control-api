@@ -12,7 +12,7 @@
 	<artifactId>parking-control</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>parking-control</name>
-	<description>Parking Controler API</description>
+	<description>Parking Control API</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
