@@ -1,5 +1,8 @@
 package com.api.parkingcontrol.models;
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -40,6 +43,14 @@ public class ParkingSpot implements Serializable {
 
     @Column(nullable = false, length = 30)
     private String block;
+
+//    @CreatedDate
+//    @Column(name = "created_at")
+//    private LocalDateTime createdAt;
+//
+//    @LastModifiedDate
+//    @Column(name = "update_at")
+//    private LocalDateTime updatedAt ;
 
     public UUID getId() {
         return id;
