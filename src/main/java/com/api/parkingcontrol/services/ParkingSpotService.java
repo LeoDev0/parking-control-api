@@ -81,7 +81,7 @@ public class ParkingSpotService {
         var parkingSpot = parkingSpotRepository.findById(id);
 
 //        if (!parkingSpot.isPresent()) {
-//            throw new NotFoundException("Parking Spot not found.");
+//            throw new NotFoundException("Parking Spot of id " + id + " not found.");
 //        }
 //        return parkingSpot;
 
