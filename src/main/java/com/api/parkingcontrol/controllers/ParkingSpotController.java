@@ -3,6 +3,7 @@ package com.api.parkingcontrol.controllers;
 import com.api.parkingcontrol.dtos.ParkingSpotDto;
 import com.api.parkingcontrol.models.ParkingSpot;
 import com.api.parkingcontrol.services.ParkingSpotService;
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -17,7 +18,8 @@ import java.util.UUID;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/parking-spot")
+@Api(value = "Parking Control REST API")
+@RequestMapping("/api/parking-spot")
 public class ParkingSpotController {
 
     private final ParkingSpotService parkingSpotService;
